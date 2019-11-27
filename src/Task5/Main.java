@@ -30,9 +30,8 @@ public class Main {
             } else done = true;
         }
         for (Map.Entry<String, Map<String, Integer>> entry: result.entrySet()) {
-            System.out.println("Покупатель " + entry.getKey() + " купил:");
-            System.out.println(entry.getValue());
+            System.out.println(entry.getKey() + ":");
+            System.out.println(entry.getValue().toString().replaceAll("[{}]","").replace("="," - "));
         }
-        // пока не допилил вывод
     }
 }
